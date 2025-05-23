@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
             cout << name << "(" << t->lexeme << ") ";
         else
             cout << name << " ";
+        delete t; // tinha um vazamento de memoria aqui
     }while (t->name != END_OF_FILE);
 
     delete scanner;
